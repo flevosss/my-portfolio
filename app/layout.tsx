@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   description: 'Created with love by flev0s',
   generator: 'v1.1',
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: '/michalis-flevaris.png',
+    shortcut: '/michalis-flevaris.png',
+    apple: '/michalis-flevaris.png',
   },
 }
 
