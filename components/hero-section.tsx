@@ -83,23 +83,20 @@ export function HeroSection() {
             >
               View My Work
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-3 text-lg hover-lift bg-transparent">
-              Download Resume
-            </Button>
           </div>
 
           <div className="flex items-center justify-center space-x-6">
-            <Button variant="ghost" size="icon" className="hover-lift" asChild>
+            <Button variant="ghost" size="icon" className="hover-lift hover:bg-primary hover:text-primary-foreground" asChild>
               <a href="https://github.com/flevosss/" target="_blank" rel="noopener noreferrer">
                 <Github className="h-6 w-6" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" className="hover-lift" asChild>
+            <Button variant="ghost" size="icon" className="hover-lift hover:bg-primary hover:text-primary-foreground" asChild>
               <a href="https://www.linkedin.com/in/mflevaris/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-6 w-6" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" className="hover-lift" asChild>
+            <Button variant="ghost" size="icon" className="hover-lift hover:bg-primary hover:text-primary-foreground" asChild>
               <a href="mailto:michail@flevaris.gr">
                 <Mail className="h-6 w-6" />
               </a>

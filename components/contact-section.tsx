@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, Github, Linkedin } from "lucide-react"
 
 export function ContactSection() {
 
@@ -9,8 +9,8 @@ export function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "michail@flevaris.gr",
-      link: "mailto:michail@flevaris.gr",
+      value: "michalis@flevaris.gr",
+      link: "mailto:michalis@flevaris.gr",
     },
     {
       icon: Phone,
@@ -19,11 +19,17 @@ export function ContactSection() {
       link: "tel:31611474500",
     },
     {
-      icon: MapPin,
-      title: "Location",
-      value: "Enschede, The Netherlands",
-      link: "https://maps.app.goo.gl/suR3JxxCDpMpbT2W7",
+      icon: Github,
+      title: "GitHub",
+      value: "github.com/flevosss",
+      link: "https://github.com/flevosss",
     },
+    { // linkedin
+      icon: Linkedin,
+      title: "LinkedIn",
+      value: "linkedin.com/in/mflevaris",
+      link: "https://linkedin.com/in/mflevaris",
+    }
   ]
 
   return (
@@ -31,11 +37,8 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Let's <span className="text-primary">Connect</span>
+            You can <span className="text-primary">reach out </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            Have a project in mind or just want to chat? I'd love to hear from you!
-          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -52,7 +55,12 @@ export function ContactSection() {
                       </div>
                       <div>
                         <p className="font-medium">{info.title}</p>
-                        <a href={info.link} className="text-muted-foreground hover:text-primary transition-colors">
+                        <a
+                          href={info.link}
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                          target={info.link.startsWith("http") ? "_blank" : undefined}
+                          rel={info.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                        >
                           {info.value}
                         </a>
                       </div>
@@ -60,6 +68,18 @@ export function ContactSection() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-sm text-muted-foreground">I'm currently based in</p>
+              <a
+                href="https://maps.app.goo.gl/suR3JxxCDpMpbT2W7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium hover:underline"
+              >
+                Enschede, The Netherlands
+              </a>
             </div>
           </div>
         </div>
