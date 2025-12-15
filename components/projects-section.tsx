@@ -12,6 +12,9 @@ export function ProjectsSection() {
   const railslipsDescription =
     "Railslips is a compact HR & payroll app built with Ruby on Rails. It features employee records, payroll and leave management, role-based access, and PDF payslips. Hosted on Render." 
 
+  const javaChessDescription =
+    "A Java-based chess game designed with object-oriented principles, with a graphical user interface using Swing. Networking is supported and communication happens between the clients and the server via a protocol using sockets."
+
   const projects = [
     {
       title: "Railslips - HR & Payroll System",
@@ -22,6 +25,15 @@ export function ProjectsSection() {
       githubUrl: "https://github.com/flevosss/BE_payslips",
       featured: true,
     },
+    {
+      title: "Chess in Java (with Swing)",
+      description: javaChessDescription,
+      image: "/java-chess.png",
+      technologies: ["Java", "Swing", "OOP", "Sockets"],
+        liveUrl: "https://github.com/flevosss/myJavaChess",
+      githubUrl: "https://github.com/flevosss/myJavaChess",
+      featured: true,
+    },
   ]
 
   const featuredProjects = projects.filter((p) => p.featured)
@@ -29,14 +41,14 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
             My <span className="text-primary">Projects</span>
           </h2>
 
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredProjects.map((project, idx) => (
-              <div key={idx} className="w-full max-w-xl">
+              <div key={idx} className="w-full">
                 <ProjectCard
                   title={project.title}
                   description={project.description}

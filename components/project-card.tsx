@@ -22,7 +22,7 @@ export default function ProjectCard({
   technologies = [],
 }: ProjectCardProps) {
   return (
-    <div className="w-full max-w-md bg-card border border-border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="w-full max-w-xl bg-card border border-border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       {/* Project Image */}
       <div className="relative overflow-hidden bg-muted h-40 w-full">
         <Image
